@@ -21,7 +21,7 @@ namespace PhoneBook
             foreach (var item in text)
             {
                 string[] splitted = splitter.SplitText(item, new char[] { '|' });
-                Person person = new Person(splitted[0], splitted[1], splitted[2]);
+                Person person = new Person(splitted[0].Trim(), splitted[1].Trim(), splitted[2].Trim());
                 phoneBook.AddPerson(person);
             }
 

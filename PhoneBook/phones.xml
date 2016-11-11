@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-16"?>
+<PhoneBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <People>
+    <Person>
+      <Name>Mimi Shmatkata</Name>
+      <Town>Plovdiv</Town>
+      <PhoneNumber>0888 12 34 56</PhoneNumber>
+    </Person>
+    <Person>
+      <Name>Kireto</Name>
+      <Town>Varna</Town>
+      <PhoneNumber>052 23 45 67</PhoneNumber>
+    </Person>
+    <Person>
+      <Name>Daniela Ivanova Petrova</Name>
+      <Town>Karnobat</Town>
+      <PhoneNumber>0899 999 888</PhoneNumber>
+    </Person>
+    <Person>
+      <Name>Bat Gancho</Name>
+      <Town>Sofia</Town>
+      <PhoneNumber>02 946 946 946</PhoneNumber>
+    </Person>
+  </People>
+</PhoneBook>

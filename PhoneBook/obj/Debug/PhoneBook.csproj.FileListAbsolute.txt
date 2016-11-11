@@ -4,3 +4,11 @@ C:\Users\Student\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\D
 C:\Users\Student\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.pdb
 C:\Users\Student\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
 C:\Users\Student\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\PhoneBook.exe.config
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\obj\Debug\PhoneBook.exe
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\PhoneBook.exe
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\PhoneBook.pdb
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\Newtonsoft.Json.dll
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\Newtonsoft.Json.xml
+D:\VS Solutions\CSharpPnoneBook\PhoneBook\obj\Debug\PhoneBook.csprojResolveAssemblyReference.cache

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    interface ISerlialize
+    interface ISerlializer<T>
     {
-        void Serialize(PhoneBook data, string toFile, IWriter writer);
+        void Serialize(T data, IWriter writer);
 
-        void Deserialize();
+        void Deserialize(string text);
     }
 }
