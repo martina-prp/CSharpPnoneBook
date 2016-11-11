@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    interface ISerlializer<T>
+    public interface ISerlializer<T>
     {
         void Serialize(T data, IWriter writer);
 

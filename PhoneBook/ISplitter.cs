@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    interface ISplitter
+    public interface ISplitter
     {
         string[] SplitText(string text, char[] splitter);
     }

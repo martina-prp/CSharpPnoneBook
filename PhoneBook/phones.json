@@ -1,24 +1,12 @@
-{
-  "People": [
-    {
-      "Name": "Mimi Shmatkata",
-      "Town": "Plovdiv",
-      "PhoneNumber": "0888 12 34 56"
-    },
-    {
-      "Name": "Kireto",
-      "Town": "Varna",
-      "PhoneNumber": "052 23 45 67"
-    },
-    {
-      "Name": "Daniela Ivanova Petrova",
-      "Town": "Karnobat",
-      "PhoneNumber": "0899 999 888"
-    },
-    {
-      "Name": "Bat Gancho",
-      "Town": "Sofia",
-      "PhoneNumber": "02 946 946 946"
-    }
-  ]
-}
+[
+  {
+    "Name": "Kireto",
+    "Town": "Varna",
+    "PhoneNumber": "052 23 45 67"
+  },
+  {
+    "Name": "Kireto",
+    "Town": "Sofia",
+    "PhoneNumber": "052 23 45 68"
+  }
+]

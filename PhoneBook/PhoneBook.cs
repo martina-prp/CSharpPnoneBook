@@ -28,7 +28,7 @@ namespace PhoneBook
             return false;
         }
 
-        public HashSet<Person> FindByName(string name)
+        public HashSet<Person> Find(string name)
         {
             HashSet<Person> personMatches = new HashSet<Person>();
             List<Person> personList = People.Where(person => person.Name == name).ToList();
@@ -40,7 +40,7 @@ namespace PhoneBook
             return personMatches;
         }
 
-        public HashSet<Person> FindByNameAndTown(string name, string town)
+        public HashSet<Person> Find(string name, string town)
         {
             HashSet<Person> personMatches = new HashSet<Person>();
             List<Person> personList = People.Where(person => (person.Name == name && person.Town == town)).ToList<Person>();
@@ -52,9 +52,10 @@ namespace PhoneBook
             return personMatches;
         }
 
-        public void Serialize(string name, string filename, string serializationtype)
+        public void Serialize(string name, ISerlializer<HashSet<Person>> serializer)
         {
-
+            HashSet<Person> setToBeserialise = Find(name);
+            //serializer.Serialize(setToBeserialise);
         }
 
         public IEnumerator GetEnumerator()

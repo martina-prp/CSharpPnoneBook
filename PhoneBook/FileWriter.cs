@@ -9,28 +9,26 @@ namespace PhoneBook
 {
     class FileWriter : IWriter
     {
-        public string Path { get; set; }
+        private StreamWriter writer;
 
         public FileWriter(string path)
         {
-            this.Path = path;
+            this.writer = new StreamWriter(path);
         }
 
         public void Write(string text)
         {
-            StreamWriter writer = new StreamWriter(this.Path);
-            using (writer)
+            using (this.writer)
             {
-                writer.Write(text);
+                this.writer.Write(text);
             }
         }
 
         public void WriteLine(string text)
         {
-            StreamWriter writer = new StreamWriter(this.Path);
-            using (writer)
+            using (this.writer)
             {
-                writer.WriteLine(text);
+                this.writer.WriteLine(text);
             }
         }
     }

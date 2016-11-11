@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    class Factory
+    public class Factory
     {
         public PhoneBook Create()
         {
             PhoneBook phoneBook = new PhoneBook();
 
-            TextReader txtReader = new TextReader("../../phones.txt");
+            TextReader txtReader = new TextReader("../../../phones.txt");
 
             List<string> text = txtReader.ReadToEnd();
 

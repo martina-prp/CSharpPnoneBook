@@ -12,3 +12,5 @@ D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\PhoneBook.pdb
 D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\Newtonsoft.Json.dll
 D:\VS Solutions\CSharpPnoneBook\PhoneBook\bin\Debug\Newtonsoft.Json.xml
 D:\VS Solutions\CSharpPnoneBook\PhoneBook\obj\Debug\PhoneBook.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Student\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\Newtonsoft.Json.xml

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    interface IReader
+    public interface IReader
     {
         string ReadLine(); 
     }

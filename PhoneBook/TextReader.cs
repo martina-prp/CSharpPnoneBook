@@ -41,12 +41,20 @@ namespace PhoneBook
             StreamReader reader = new StreamReader(this.Path);
             using (reader)
             {
-                while ((line = reader.ReadLine()) != null) {
+                while ((line = reader.ReadLine()) != null) //return reader.ReadToEnd();
+                {
                     text.Add(line);
                 }
             }
 
             return text;
+        }
+
+        public string ReadToEnd2()
+        {
+            StreamReader reader = new StreamReader(this.Path);
+
+            return reader.ReadToEnd(); ;
         }
     }
 }
