@@ -34,23 +34,23 @@ namespace PhoneBook
             return null;
         }
 
-        public List<string> ReadToEnd()
-        {
-            List<string> text = new List<string>();
-            string line;
-            StreamReader reader = new StreamReader(this.Path);
-            using (reader)
-            {
-                while ((line = reader.ReadLine()) != null) //return reader.ReadToEnd();
-                {
-                    text.Add(line);
-                }
-            }
+        //public List<string> ReadToEnd()
+        //{
+        //    List<string> text = new List<string>();
+        //    string line;
+        //    StreamReader reader = new StreamReader(this.Path);
+        //    using (reader)
+        //    {
+        //        while ((line = reader.ReadLine()) != null) //return reader.ReadToEnd();
+        //        {
+        //            text.Add(line);
+        //        }
+        //    }
 
-            return text;
-        }
+        //    return text;
+        //}
 
-        public string ReadToEnd2()
+        public string ReadToEnd()
         {
             StreamReader reader = new StreamReader(this.Path);
 

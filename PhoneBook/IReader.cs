@@ -9,6 +9,8 @@ namespace PhoneBook
 {
     public interface IReader
     {
-        string ReadLine(); 
+        string ReadLine();
+
+        string ReadToEnd();
     }
 }

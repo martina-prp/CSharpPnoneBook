@@ -52,10 +52,12 @@ namespace PhoneBook
             return personMatches;
         }
 
-        public void Serialize(string name, ISerlializer<HashSet<Person>> serializer)
+        public string Serialize(string name, ISerlializer<HashSet<Person>> serializer)
         {
             HashSet<Person> setToBeserialise = Find(name);
-            //serializer.Serialize(setToBeserialise);
+            string jsonString = serializer.Serialize(setToBeserialise);
+
+            return jsonString;
         }
 
         public IEnumerator GetEnumerator()

@@ -10,8 +10,16 @@ namespace PhoneBook
     {
         static void Main(string[] args)
         {
-            Factory phoneBookFactory = new Factory();
-            PhoneBook phoneBook = phoneBookFactory.Create();
+            TextReader reader = new TextReader("../../../phones.txt");
+            IPhoneBookParser phoneBookParser = new PhoneBookParser();
+            PhoneBook phoneBook = phoneBookParser.ParseData(reader);
+            foreach (var item in phoneBook)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Factory phoneBookFactory = new Factory();
+            //PhoneBook phoneBook = phoneBookFactory.Create();
             //phoneBook.Serialize("Kireto", "../../phones.xml", "xml");
             //CustomXmlSerializer<HashSet<Person>> xmlSerializer = new CustomXmlSerializer<HashSet<Person>>();
             //xmlSerializer.Serialize(phoneBook.People, new FileWriter("../../phones.xml"));
@@ -29,13 +37,14 @@ namespace PhoneBook
             //    Console.WriteLine(item);
             //}
 
-            TextReader commandsReader = new TextReader("../../../commands.txt");
-            Splitter commandsSplitter = new Splitter();
-            string commands = commandsReader.ReadToEnd2();
-            foreach (var item in commands)
-            {
-                Console.WriteLine(item);
-            }
+            //TextReader commandsReader = new TextReader("../../../phones.txt");
+            //string commands = commandsReader.ReadToEnd2();
+            //Splitter commandsSplitter = new Splitter();
+            //string[] test = commandsSplitter.SplitText(commands, new char[] { '|' });
+            //foreach (var item in test)
+            //{
+            //    Console.WriteLine(item);
+            //}
             //foreach (string item in commands)
             //{
             //    string[] splittedCommand = commandsSplitter.SplitText(item, new char[] {'(', ')', ','});
@@ -51,7 +60,7 @@ namespace PhoneBook
             //                phoneBook.FindByNameAndTown(splittedCommand[1], splittedCommand[2]);
             //            }
             //            break;
-                        
+
             //    }
             //}
         }

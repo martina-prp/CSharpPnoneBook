@@ -10,10 +10,11 @@ namespace PhoneBook
 {
     class CustomJsonSerializer<T> : ISerlializer<T> where T: IEnumerable
     {
-        public void Serialize(T data, IWriter writer)
+        public string Serialize(T data)
         {
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            writer.WriteLine(json);
+
+            return json;
         }
 
         public void Deserialize(string json)

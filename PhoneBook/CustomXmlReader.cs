@@ -18,11 +18,16 @@ namespace PhoneBook
 
         public string ReadLine()
         {
-            XmlReader reader = XmlReader.Create(this.Path);
+            //XmlReader reader = XmlReader.Create(this.Path);
 
             //string node = reader.Read();
 
             return "";
+        }
+
+        public string ReadToEnd()
+        {
+            throw new NotImplementedException();
         }
     }
 }

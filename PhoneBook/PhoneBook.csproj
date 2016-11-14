@@ -50,6 +50,7 @@
     <Compile Include="CustomJsonSerializer.cs" />
     <Compile Include="CustomXmlReader.cs" />
     <Compile Include="Factory.cs" />
+    <Compile Include="IPhoneBookParser.cs" />
     <Compile Include="IReader.cs" />
     <Compile Include="ISerlializer.cs" />
     <Compile Include="ISplitter.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Person.cs" />
     <Compile Include="PersonComparer.cs" />
     <Compile Include="PhoneBook.cs" />
+    <Compile Include="PhoneBookParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Splitter.cs" />

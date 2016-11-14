@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    public interface ISerlializer<T>
+    public interface IPhoneBookParser
     {
-        string Serialize(T data);
-
-        void Deserialize(string text);
+        PhoneBook ParseData(IReader reader);
     }
 }
