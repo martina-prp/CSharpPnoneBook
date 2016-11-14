@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    public interface IReader
+    public enum OperationType
     {
-        string ReadLine();
-
-        List<string> ReadToEnd();
+        Default,
+        Find,
+        Serialize,
     }
 }

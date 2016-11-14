@@ -10,7 +10,7 @@ namespace PhoneBook
     {
         public string[] SplitText(string text, char[] splitter)
         {
-            return text.Split(splitter);
+            return text.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }

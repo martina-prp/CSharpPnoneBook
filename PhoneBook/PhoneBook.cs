@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    public class PhoneBook : IEnumerable
+    public class PhoneBook : IEnumerable , ICommandable
     {
         public HashSet<Person> People { get; set; }
         
@@ -52,10 +52,15 @@ namespace PhoneBook
             return personMatches;
         }
 
-        public string Serialize(string name, ISerlializer<HashSet<Person>> serializer)
+        public string Serialize(string name, ISerializer<HashSet<Person>> serializer)
         {
             HashSet<Person> setToBeserialise = Find(name);
             string jsonString = serializer.Serialize(setToBeserialise);
+
+            foreach (var item in setToBeserialise)
+            {
+                Console.WriteLine();
+            }
 
             return jsonString;
         }
@@ -66,6 +71,11 @@ namespace PhoneBook
             {
                 yield return item;
             }
+        }
+
+        public bool isCommandale()
+        {
+            return true;
         }
     }
 

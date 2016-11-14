@@ -10,17 +10,18 @@ using System.Collections;
 
 namespace PhoneBook
 {
-    class CustomXmlSerializer<T> : ISerlializer<T> where T : IEnumerable
+    class XMLSerializer<T> : ISerializer<T> where T : IEnumerable
     {
-        public void Serialize(T data, IWriter writer)
+        public string Serialize(T data)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             TextWriter stringWriter = new StringWriter();
             serializer.Serialize(stringWriter, data);
-            writer.WriteLine(stringWriter.ToString());
+
+            return stringWriter.ToString();
         }
 
-        public void Deserialize(string data) // ???
+        public T Deserialize(string data) // ???
         {
             T obj = default(T);
             XmlSerializer serializer = new XmlSerializer(typeof(T));
@@ -28,10 +29,8 @@ namespace PhoneBook
             {
                 obj = (T)serializer.Deserialize(reader);
             }
-            foreach (var item in obj)
-            {
-                Console.WriteLine(item.ToString());
-            }
+
+            return obj;
         }
     }
 }

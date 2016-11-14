@@ -12,15 +12,14 @@ namespace PhoneBook
         {
             PhoneBook newPhoneBook = new PhoneBook();
 
-            string data = reader.ReadToEnd();
+            List<string> data = reader.ReadToEnd();
 
             ISplitter splitter = new Splitter();
 
-            string[] splittedData = splitter.SplitText(data, new char[] {'|', '\n'});
-
-            for (int i = 0; i < splittedData.Length; i += 3)
+            foreach (var item in  data)
             {
-                newPhoneBook.AddPerson(new Person(splittedData[i], splittedData[i + 1], splittedData[i + 2]));
+                string[] splittedData = splitter.SplitText(item, new char[] { '|' });
+                newPhoneBook.AddPerson(new Person(splittedData[0].Trim(), splittedData[1].Trim(), splittedData[2].Trim()));
             }
 
             return newPhoneBook;

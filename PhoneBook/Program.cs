@@ -8,59 +8,82 @@ namespace PhoneBook
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            TextReader reader = new TextReader("../../../phones.txt");
+            FileReader reader = new FileReader("../../../phones.txt");
             IPhoneBookParser phoneBookParser = new PhoneBookParser();
             PhoneBook phoneBook = phoneBookParser.ParseData(reader);
-            foreach (var item in phoneBook)
+
+            FileReader commandsReader = new FileReader("../../../commands.txt");
+            CommandParser<PhoneBook> commandsParser = new CommandParser<PhoneBook>();
+            IEnumerable<Command<PhoneBook>> commandList = commandsParser.ParseCommands(commandsReader);
+            
+            foreach (var c in commandList)
             {
-                Console.WriteLine(item);
+                c.PrintCommandResult(phoneBook);
+
+                //foreach (var item in result)
+                //{
+                //    Console.WriteLine(item);
+                //}
+   
             }
 
-            //Factory phoneBookFactory = new Factory();
-            //PhoneBook phoneBook = phoneBookFactory.Create();
-            //phoneBook.Serialize("Kireto", "../../phones.xml", "xml");
-            //CustomXmlSerializer<HashSet<Person>> xmlSerializer = new CustomXmlSerializer<HashSet<Person>>();
-            //xmlSerializer.Serialize(phoneBook.People, new FileWriter("../../phones.xml"));
-
-            //CustomJsonSerializer<HashSet<Person>> jsonSerializer = new CustomJsonSerializer<HashSet<Person>>();
-            //jsonSerializer.Serialize(phoneBook, new FileWriter("../../phones.json"));
-
-            //string test = "[{ \"Name\": \"Mimi Shmatkata\", \"Town\": \"Plovdiv\", \"PhoneNumber\": \"0888 12 34 56\"} ]";
-            //jsonSerializer.Deserialize(test);
-
-            //HashSet<Person> matches = new HashSet<Person>();
-            //matches = phoneBook.FindByNameAndTown("Kireto", "Sofia");
-            //foreach (var item in matches)
-            //{
-            //    Console.WriteLine(item);
-            //}
-
-            //TextReader commandsReader = new TextReader("../../../phones.txt");
-            //string commands = commandsReader.ReadToEnd2();
             //Splitter commandsSplitter = new Splitter();
-            //string[] test = commandsSplitter.SplitText(commands, new char[] { '|' });
-            //foreach (var item in test)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            //string[] commands = commandsSplitter.SplitText(commandsReader.ReadToEnd(), new char[] { '\n', '\r' });
+
             //foreach (string item in commands)
             //{
-            //    string[] splittedCommand = commandsSplitter.SplitText(item, new char[] {'(', ')', ','});
+            //    string[] splittedCommand = commandsSplitter.SplitText(item, new char[] { '(', ')', ',', ' ' });
             //    switch (splittedCommand[0])
             //    {
             //        case "find":
+            //            Console.WriteLine("----------------------------------");
+            //            HashSet<Person> found = new HashSet<Person>();
+
             //            if (splittedCommand.Length == 2)
             //            {
-            //                phoneBook.FindByName(splittedCommand[1]);
+            //                found = phoneBook.Find(splittedCommand[1]);
             //            }
-            //            else if(splittedCommand.Length == 3)
+            //            else if (splittedCommand.Length == 3)
             //            {
-            //                phoneBook.FindByNameAndTown(splittedCommand[1], splittedCommand[2]);
+            //                found = phoneBook.Find(splittedCommand[1], splittedCommand[2]);
+            //            }
+
+            //            foreach (var person in found)
+            //            {
+            //                Console.WriteLine(person);
             //            }
             //            break;
 
+            //        case "serialize":
+            //            if (splittedCommand[3] == "xml")
+            //            {
+            //                ISerializer<HashSet<Person>> XMLSerializer = new XMLSerializer<HashSet<Person>>();
+
+            //                IWriter XMLwriter = new FileWriter(splittedCommand[2]);
+
+            //                XMLwriter.WriteLine(phoneBook.Serialize(splittedCommand[1], XMLSerializer));
+            //            }
+
+            //            if (splittedCommand[3] == "json")
+            //            {
+            //                ISerializer<HashSet<Person>> serializer = new JSONSerializer<HashSet<Person>>();
+
+            //                IWriter writer = new FileWriter(splittedCommand[2]);
+
+            //                writer.WriteLine(phoneBook.Serialize(splittedCommand[1], serializer));
+            //            }
+            //            break;
+
+            //        case "add":
+            //            phoneBook.AddPerson(new Person(splittedCommand[1], splittedCommand[2], splittedCommand[3]));
+            //            break;
+
+            //        default:
+            //            Console.WriteLine("Invalid operation!");
+            //            break;
             //    }
             //}
         }

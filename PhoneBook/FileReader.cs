@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    class TextReader : IReader
+    class FileReader : IReader
     {
         public string Path { get; set; }
 
-        public TextReader(string path)
+        public FileReader(string path)
         {
             this.Path = path;
         }
@@ -34,27 +34,27 @@ namespace PhoneBook
             return null;
         }
 
-        //public List<string> ReadToEnd()
-        //{
-        //    List<string> text = new List<string>();
-        //    string line;
-        //    StreamReader reader = new StreamReader(this.Path);
-        //    using (reader)
-        //    {
-        //        while ((line = reader.ReadLine()) != null) //return reader.ReadToEnd();
-        //        {
-        //            text.Add(line);
-        //        }
-        //    }
-
-        //    return text;
-        //}
-
-        public string ReadToEnd()
+        public List<string> ReadToEnd()
         {
+            List<string> text = new List<string>();
+            string line;
             StreamReader reader = new StreamReader(this.Path);
+            using (reader)
+            {
+                while ((line = reader.ReadLine()) != null) //return reader.ReadToEnd();
+                {
+                    text.Add(line);
+                }
+            }
 
-            return reader.ReadToEnd(); ;
+            return text;
         }
+
+        //public string ReadToEnd()
+        //{
+        //    StreamReader reader = new StreamReader(this.Path);
+
+        //    return reader.ReadToEnd(); ;
+        //}
     }
 }
