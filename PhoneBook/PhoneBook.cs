@@ -55,14 +55,14 @@ namespace PhoneBook
         public string Serialize(string name, ISerializer<HashSet<Person>> serializer)
         {
             HashSet<Person> setToBeserialise = Find(name);
-            string jsonString = serializer.Serialize(setToBeserialise);
+            string serializedString = serializer.Serialize(setToBeserialise);
 
             foreach (var item in setToBeserialise)
             {
                 Console.WriteLine();
             }
 
-            return jsonString;
+            return serializedString;
         }
 
         public IEnumerator GetEnumerator()
