@@ -7,6 +7,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
 using System.Collections;
+using PhoneBook.Contracts;
 
 namespace PhoneBook
 {
@@ -21,7 +22,7 @@ namespace PhoneBook
             return stringWriter.ToString();
         }
 
-        public T Deserialize(string data) // ???
+        public T Deserialize(string data)
         {
             T obj = default(T);
             XmlSerializer serializer = new XmlSerializer(typeof(T));

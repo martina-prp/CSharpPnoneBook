@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhoneBook
+namespace PhoneBook.Contracts
 {
-    public interface IPhoneBookParser
+    public interface IWriter
     {
-        PhoneBook ParseData(IReader reader);
+        void Write(string text);
+
+        void WriteLine(string text);
     }
 }

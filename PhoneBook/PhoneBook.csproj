@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCommand.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="CommandParser.cs" />
     <Compile Include="ConsoleWriter.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,6 @@ namespace PhoneBook
 
             for (int i = 0; i < CommandArguments.Length; i++)
             {
-                Console.WriteLine(CommandArguments[i]);
                 arguments[i] = CommandArguments[i].GetType();
             }
             var method = objType.GetMethod(CommandName, arguments);

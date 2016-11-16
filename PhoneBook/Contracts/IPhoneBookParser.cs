@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhoneBook
+namespace PhoneBook.Contracts
 {
-    public interface ICommandable
+    public interface IPhoneBookParser
     {
-        bool isCommandale();
+        PhoneBook ParseData(IReader reader);
     }
 }

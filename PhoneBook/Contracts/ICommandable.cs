@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhoneBook
+namespace PhoneBook.Contracts
 {
-    public interface IReader
+    public interface ICommandable
     {
-        string ReadLine();
-
-        List<string> ReadToEnd();
+        bool isCommandale();
     }
 }

@@ -11,5 +11,6 @@ namespace PhoneBook
         Default,
         Find,
         Serialize,
+        Add,
     }
 }

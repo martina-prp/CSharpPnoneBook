@@ -1,1 +1,4 @@
-serialize(Mimi Shmatkata, ../../phones.xml, xml)
+serialize(Kireto, ../../phones.xml, xml)
+find(Bat Gancho)
+serialize(Mimi Shmatkata, ../../phones.json, json)
+add(Kireto, Pernik, 052 23 35 68);

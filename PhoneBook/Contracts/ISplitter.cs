@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhoneBook
+namespace PhoneBook.Contracts
 {
-    public interface IWriter
+    public interface ISplitter
     {
-        void Write(string text);
-
-        void WriteLine(string text);
+        string[] SplitText(string text, char[] splitter);
     }
 }
